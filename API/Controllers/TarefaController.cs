@@ -22,7 +22,7 @@ namespace TarefasAPI.Controllers
             _tarefaServico = tarefaService;
         }
 
-        [HttpPost("create")]
+        [HttpPost("tarefas")]
         public IActionResult CriarTafefa(
             [FromBody] TarefaCreateDTO tarefaCreateDTO,
             ITarefaService tarefaService
@@ -40,14 +40,14 @@ namespace TarefasAPI.Controllers
             return Ok();
         }
 
-        [HttpGet("getAll")]
+        [HttpGet("tarefas")]
         public IActionResult GetAll(ITarefaService tarefaService)
         {
             var tarefas = tarefaService.GetAll();
             return Ok(tarefas);
         }
 
-        [HttpGet("getId{id}")]
+        [HttpGet("tarefas/{id}")]
         public IActionResult GetPorId(int id, ITarefaService tarefaService)
         {
             var getId = tarefaService.BuscarPorId(id);
@@ -60,35 +60,35 @@ namespace TarefasAPI.Controllers
             return Ok(getId);
         }
 
-        [HttpGet("getTitulo/{titulo}")]
+        [HttpGet("tarefas/titulo/{titulo}")]
         public IActionResult GetPorTitulo(string titulo, ITarefaService tarefaService)
         {
             var getTitulo = tarefaService.BuscarPorTitulo(titulo);
             return Ok(getTitulo);
         }
 
-        [HttpGet("getData/{data}")]
+        [HttpGet("tarefas/data/{data}")]
         public IActionResult GetPorData(DateTime data, ITarefaService tarefaService)
         {
             var getData = tarefaService.BuscarPorData(data);
             return Ok(getData);
         }
 
-        [HttpGet("getStatus/{status}")]
+        [HttpGet("tarefas/status/{status}")]
         public IActionResult GetPorStatus(StatusAtivo status, ITarefaService tarefaService)
         {
             var getStatus = tarefaService.BuscarPorStatus(status);
             return Ok(getStatus);
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("tarefas/{id}")]
         public IActionResult Update(int id, TarefaUpdateDTO tarefaUpdateDTO, ITarefaService tarefaService)
         {
             var updateTarefa = tarefaService.Atualizar(id, tarefaUpdateDTO);
             return Ok(updateTarefa);
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("tarefas/{id}")]
         public IActionResult Delete(int id, ITarefaService tarefaService)
         {
             var deleteTarefa = tarefaService.Deletar(id);
