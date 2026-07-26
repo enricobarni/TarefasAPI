@@ -85,6 +85,12 @@ namespace TarefasAPI.Controllers
         public IActionResult Update(int id, TarefaUpdateDTO tarefaUpdateDTO, ITarefaService tarefaService)
         {
             var updateTarefa = tarefaService.Atualizar(id, tarefaUpdateDTO);
+
+            if (updateTarefa is null)
+            {
+                return NotFound();
+            }
+
             return Ok(updateTarefa);
         }
 
