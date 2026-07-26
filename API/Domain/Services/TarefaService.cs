@@ -4,13 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.HttpResults;
 using TarefasAPI.Application.DTOs;
-using TarefasAPI.Application.Interfaces;
+using TarefasAPI.Domain.Interfaces;
 using TarefasAPI.Domain.Entites;
 using TarefasAPI.Domain.Enums;
 using TarefasAPI.Infrastructure.DB;
 
 
-namespace TarefasAPI.Application.Services
+namespace TarefasAPI.Domain.Services
 {
     public class TarefaService : ITarefaService
     {

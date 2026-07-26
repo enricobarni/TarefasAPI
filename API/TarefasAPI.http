@@ -1,6 +1,0 @@
-@TarefasAPI_HostAddress = http://localhost:5029
-
-GET {{TarefasAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

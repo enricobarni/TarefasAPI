@@ -7,7 +7,7 @@ using TarefasAPI.Infrastructure.DB;
 using TarefasAPI.Domain.Entites;
 using TarefasAPI.Domain.Enums;
 
-namespace TarefasAPI.Application.Interfaces
+namespace TarefasAPI.Domain.Interfaces
 {
     public interface ITarefaService
     {

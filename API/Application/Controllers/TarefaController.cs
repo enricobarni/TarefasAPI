@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TarefasAPI.Application.DTOs;
-using TarefasAPI.Application.Interfaces;
-using TarefasAPI.Application.Services;
+using TarefasAPI.Domain.Interfaces;
+using TarefasAPI.Domain.Services;
 using TarefasAPI.Domain.Enums;
 using TarefasAPI.Infrastructure.DB;
 
-namespace TarefasAPI.Controllers
+namespace TarefasAPI.Application.Controllers
 {
     [ApiController]
     [Route("[controller]")]
